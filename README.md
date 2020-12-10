@@ -1,12 +1,11 @@
 # VID-Token-Subgraph
 Subgraph for the VID Token contracts
-[V-ID]:https://about.v-id.org
-[V-ID] is a service built to help prevent document fraud and add value by validating and verifying documents using blockchain technology.
+[V-ID](https://about.v-id.org) is a service built to help prevent document fraud and add value by validating and verifying documents using blockchain technology.
 ## Networks and Performance
 This subgraph can be found on The Graph Hosted Service at
 https://thegraph.com/explorer/subgraph/alexklos/vid-token
 
-You can also run this subgraph locally, if you wish. Instructions for that can be found in [The Graph Documentation]:https://thegraph.com/docs/quick-start [The Graph Documentation].
+You can also run this subgraph locally, if you wish. Instructions for that can be found in [The Graph Documentation](https://thegraph.com/docs/quick-start).
 ## Example Queries
 Here we have example queries, so that you don't have to type them in yourself eachtime in the graphql playground.
 ```GraphQL
