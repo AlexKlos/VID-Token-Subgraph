@@ -1,0 +1,51 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: VIDToken
+    network: mainnet
+    source:
+      address: "0x445f51299Ef3307dBD75036dd896565F5B4BF7A5"
+      abi: VIDToken
+      startBlock: 6170448
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Burn
+        - Freeze
+        - ValidateFile
+        - ValidatePublisher
+        - ValidateWallet
+        - LogEvent
+        - Transfer
+        - Approval
+        - Pause
+        - Unpause
+      abis:
+        - name: VIDToken
+          file: ./abis/VIDToken.json
+      eventHandlers:
+        - event: Burn(indexed address,uint256)
+          handler: handleBurn
+        - event: Freeze(address,bool)
+          handler: handleFreeze
+        - event: ValidateFile(uint256,string)
+          handler: handleValidateFile
+        - event: ValidatePublisher(indexed address,bool,indexed string)
+          handler: handleValidatePublisher
+        - event: ValidateWallet(indexed address,bool,indexed string)
+          handler: handleValidateWallet
+        - event: LogEvent(uint256,string)
+          handler: handleLogEvent
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Pause()
+          handler: handlePause
+        - event: Unpause()
+          handler: handleUnpause
+      file: ./src/mapping.ts

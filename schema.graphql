@@ -1,0 +1,59 @@
+type _Burn @entity {
+  id: ID!
+  count: BigInt!
+  burner: Bytes!
+  value: BigInt!
+}
+
+type _Freeze @entity {
+  id: ID!
+  count: BigInt!
+  target: Bytes!
+  frozen: Boolean!
+}
+
+type _ValidateFile @entity {
+  id: ID!
+  count: BigInt!
+  index: BigInt!
+  data: String!
+}
+
+type _ValidatePublisher @entity {
+  id: ID!
+  count: BigInt!
+  publisherAddress: Bytes!
+  state: Boolean!
+  publisherName: Bytes!
+}
+
+type _ValidateWallet @entity {
+  id: ID!
+  count: BigInt!
+  walletAddress: Bytes!
+  state: Boolean!
+  walletName: Bytes!
+}
+
+type _LogEvent @entity {
+  id: ID!
+  count: BigInt!
+  index: BigInt!
+  data: String!
+}
+
+type _Transfer @entity {
+  id: ID!
+  count: BigInt!
+  _from: Bytes!
+  _to: Bytes!
+  _value: BigInt!
+}
+
+type _Approval @entity {
+  id: ID!
+  count: BigInt!
+  _owner: Bytes!
+  _spender: Bytes!
+  _value: BigInt!
+}

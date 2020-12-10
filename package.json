@@ -1,0 +1,16 @@
+{
+  "name": "VIDToken",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ alexklos/VIDToken",
+    "create-local": "graph create --node http://localhost:8020/ alexklos/VIDToken",
+    "remove-local": "graph remove --node http://localhost:8020/ alexklos/VIDToken",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 alexklos/VIDToken"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.19.0",
+    "@graphprotocol/graph-ts": "0.19.0"
+  }
+}
